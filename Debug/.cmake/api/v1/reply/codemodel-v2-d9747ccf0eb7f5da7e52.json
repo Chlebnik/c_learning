@@ -1,0 +1,196 @@
+{
+	"configurations" : 
+	[
+		{
+			"abstractTargets" : [],
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4
+					],
+					"jsonFile" : "directory-.-Debug-9ad1a58d4644cf6543fa.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "4.0"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "prace_s_soubory",
+					"jsonFile" : "directory-prace_s_soubory-Debug-95def22d0dbae60b65d2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "4.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "prace_s_soubory",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "prace_s_pameti",
+					"jsonFile" : "directory-prace_s_pameti-Debug-92bdab4d5f6691291dd6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "4.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "prace_s_pameti",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "prace_s_retezci",
+					"jsonFile" : "directory-prace_s_retezci-Debug-3588cc44f7ab93349d88.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "4.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "prace_s_retezci",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "prace_s_struct",
+					"jsonFile" : "directory-prace_s_struct-Debug-686e57fe8aac0a875502.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "4.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 4,
+					"source" : "prace_s_struct",
+					"targetIndexes" : 
+					[
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "c_learning"
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "soubor",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "pamet",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "retezce",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "struct",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 2,
+					"id" : "pamet::@44049745e78d32af6511",
+					"jsonFile" : "target-pamet-Debug-38e99931e2284d1574d6.json",
+					"name" : "pamet",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "retezce::@ef640bdcc96e7049910a",
+					"jsonFile" : "target-retezce-Debug-c32c8d399207861c2348.json",
+					"name" : "retezce",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "soubor::@9971011abc90c1ed379a",
+					"jsonFile" : "target-soubor-Debug-6ccb1c9d85df69e2f989.json",
+					"name" : "soubor",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "struct::@16545cbcb2f97f4bc10f",
+					"jsonFile" : "target-struct-Debug-3d4a63ff4850aeb0c0a4.json",
+					"name" : "struct",
+					"projectIndex" : 4
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/zlamys/projects/c_learning/Debug",
+		"source" : "/home/zlamys/projects/c_learning"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 9
+	}
+}

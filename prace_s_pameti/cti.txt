@@ -1,0 +1,22 @@
+Prvni radek ma 19.
+Druhy radek je o neco delsi a ma 37.
+Treti jen 14.
+1
+1
+1
+A tady treba 16.
+1.
+.....8.
+2.
+Jeden radek navic abychom vyzkouseli realloc 48.
+Prvni radek ma 19.
+Druhy radek je o neco delsi a ma 37.
+Treti jen 14.
+1
+1
+1
+A tady treba 16.
+1.
+.....8.
+2.
+Jeden radek navic abychom vyzkouseli realloc 48.

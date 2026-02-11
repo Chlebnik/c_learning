@@ -1,0 +1,3 @@
+/home/zlamys/projects/c_learning/Debug/CMakeFiles/uceni.dir
+/home/zlamys/projects/c_learning/Debug/CMakeFiles/edit_cache.dir
+/home/zlamys/projects/c_learning/Debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,5 @@
+PROJECT(soubor)
+
+ADD_EXECUTABLE(soubor src/main.c)
+
+set( CMAKE_EXPORT_COMPILE_COMMANDS ON ) 

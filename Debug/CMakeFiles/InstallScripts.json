@@ -1,0 +1,11 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/zlamys/projects/c_learning/Debug/cmake_install.cmake",
+		"/home/zlamys/projects/c_learning/Debug/prace_s_soubory/cmake_install.cmake",
+		"/home/zlamys/projects/c_learning/Debug/prace_s_pameti/cmake_install.cmake",
+		"/home/zlamys/projects/c_learning/Debug/prace_s_retezci/cmake_install.cmake",
+		"/home/zlamys/projects/c_learning/Debug/prace_s_struct/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

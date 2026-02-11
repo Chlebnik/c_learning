@@ -1,0 +1,5 @@
+PROJECT(pamet)
+
+ADD_EXECUTABLE(pamet src/main.c)
+
+set( CMAKE_EXPORT_COMPILE_COMMANDS ON ) 

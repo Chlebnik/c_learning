@@ -1,0 +1,1 @@
+/usr/bin/cc -g -Wl,--dependency-file=CMakeFiles/uceni.dir/link.d CMakeFiles/uceni.dir/src/main.c.o -o uceni
