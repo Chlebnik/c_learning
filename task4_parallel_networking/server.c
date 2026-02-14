@@ -12,11 +12,9 @@
 #define PORT 8888
 #define BUFFER_SIZE 1024
 
+// TODO: Implement SIGCHLD handler to prevent zombie processes
 void sigchld_handler(int s) {
-    // waitpid() might overwrite errno, so we save and restore it:
-    int saved_errno = errno;
-    while(waitpid(-1, NULL, WNOHANG) > 0);
-    errno = saved_errno;
+    // ...
 }
 
 int main() {
@@ -27,16 +25,10 @@ int main() {
     char buffer[BUFFER_SIZE] = {0};
 
     // 1. Create socket
-    if ((server_fd = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
-        perror("socket failed");
-        exit(EXIT_FAILURE);
-    }
+    // TODO: Create a TCP socket
+    // Hint: socket(AF_INET, SOCK_STREAM, 0)
 
-    // Forcefully attaching socket to the port 8888
-    if (setsockopt(server_fd, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, &opt, sizeof(opt))) {
-        perror("setsockopt");
-        exit(EXIT_FAILURE);
-    }
+    // TODO: Use setsockopt to reuse address/port (optional but recommended)
 
     // 2. Bind socket to port
     // TODO: Implement binding
@@ -44,15 +36,7 @@ int main() {
     // 3. Listen for connections
     // TODO: Implement listening
 
-    // Handle zombie processes
-    struct sigaction sa;
-    sa.sa_handler = sigchld_handler; // reap all dead processes
-    sigemptyset(&sa.sa_mask);
-    sa.sa_flags = SA_RESTART;
-    if (sigaction(SIGCHLD, &sa, NULL) == -1) {
-        perror("sigaction");
-        exit(1);
-    }
+    // TODO: Setup signal handler for SIGCHLD
 
     printf("Server listening on port %d\n", PORT);
 
