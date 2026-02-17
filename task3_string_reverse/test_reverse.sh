@@ -30,6 +30,18 @@ else
     exit 1
 fi
 
+# Test case 3: Empty string
+echo "" > input.txt
+./reverse < input.txt > output.txt
+RET=$?
+if [ $RET -ne 0 ]; then
+    echo "Test 3 Failed! Program crashed with exit code $RET."
+    rm input.txt output.txt reverse
+    exit 1
+fi
+
+echo "Test 3 Passed (Empty input handled)"
+
 echo "All Tests Passed!"
 rm input.txt output.txt reverse
 exit 0
