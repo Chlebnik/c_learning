@@ -43,7 +43,7 @@ int vyskyt_znaku() {
   vysledek = vstup + 1;
 
   while ((vysledek = strchr(vysledek, znak)) != NULL) {
-    printf("%d vyskyt znaku %c nalezen ve slove '%s' na pozici %ld.\n", ++vyskyt, *vysledek, vysledek, vysledek-vstup-1);
+    printf("%d vyskyt znaku %c nalezen ve slove '%s' na pozici %ld.\n", ++vyskyt, *vysledek, (vstup + 1), vysledek-vstup-1);
     vysledek++;
   }
   
