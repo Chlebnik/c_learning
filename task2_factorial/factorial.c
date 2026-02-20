@@ -1,13 +1,26 @@
 #include <stdio.h>
 
 long long factorial(int n) {
-    // TODO: Implement the factorial function
-    return 0;
+        if (n < 0) {
+                return -1;
+        }
+        if (n == 0) {
+                return 1;
+        }
+        if (n == 2) {
+                return n;
+        }
+        return n * factorial(n - 1);
 }
 
-int main() {
-    // TODO: Read an integer from stdin
-    // Call factorial(n)
-    // Print the result
-    return 0;
+int main(void) {
+        int n;
+        scanf("%d", &n);
+        long long result = factorial(n);
+        if (result == -1) {
+                printf("Negative nubmer error.\n");
+                return 1;
+        }
+        printf("%lld\n", result);
+        return 0;
 }

@@ -1,6 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int main() {
-    // TODO: Implement the solution here
-    return 0;
+int main(void) {
+        char* name = malloc(256);
+        scanf("%s", name);
+        printf("Hello, %s!\n", name);
+        free(name);
 }
