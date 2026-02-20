@@ -155,7 +155,7 @@ int vyhledej_retezec_v_souboru(void) {
         *(nalezene_radky + delka_pole + i) = 0;
       }
     }
-    *(nalezene_radky + delka_pole) = cislo_radky;
+    *(nalezene_radky + delka_pole - 1) = cislo_radky;
   }
    
   if (fclose(fw) == EOF)
