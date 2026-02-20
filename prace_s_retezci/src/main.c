@@ -39,7 +39,7 @@ int vyskyt_znaku() {
   vysledek = vstup + 1;
 
   while ((vysledek = strchr(vysledek, znak)) != NULL) {
-    printf("%d vyskyt znaku %c nalezen ve slove '%s' na poizci %d.\n", ++vyskyt, *vysledek, vysledek, vysledek-vstup-1);
+    printf("%d vyskyt znaku %c nalezen ve slove '%s' na pozici %ld.\n", ++vyskyt, *vysledek, vysledek, vysledek-vstup-1);
     vysledek++;
   }
   
@@ -56,6 +56,10 @@ int zapis_retezec_na_konec_souboru(){
   int index_nove_radky;
 
   nazev_souboru = malloc(MAX_DELKA_POLE * sizeof(char));
+  if (nazev_souboru == NULL) {
+    printf("Chyba pri alokaci pameti.");
+    return 1;
+  }
   printf("Zadejte jmeno souboru do ktereho se bude zapisovat:\n");
   if (fgets(nazev_souboru, MAX_DELKA_POLE, stdin) == NULL) {
     printf("Chyba pri nacitani jmena souboru.");
@@ -77,6 +81,12 @@ int zapis_retezec_na_konec_souboru(){
   printf("Nyni zadavejte retezce do maximalni delky 80. Pro ukonceni zadejte prazdny retezec.\n");
 
   radka = malloc(MAX_DELKA_POLE * sizeof(char));
+  if (radka == NULL) {
+    printf("Chyba pri alokaci pameti.");
+    free(nazev_souboru);
+    fclose(fw);
+    return 1;
+  }
   while(*(fgets(radka, MAX_DELKA_POLE, stdin)) != '\n') {
     if (fputs(radka, fw) == EOF) {
       printf("Chyba pri zapisi radky '%s' do souboru '%s'.", radka, nazev_souboru);
@@ -175,8 +185,14 @@ int vyhledej_retezec_v_souboru(void) {
   return 0;
 }
 
-int main(void) {
-  /* return vyskyt_znaku(); */
-  /* return zapis_retezec_na_konec_souboru(); */
+int main(int argc, char *argv[]) {
+  if (argc > 1) {
+    if (strcmp(argv[1], "zapis") == 0) {
+      return zapis_retezec_na_konec_souboru();
+    }
+    if (strcmp(argv[1], "vyskyt") == 0) {
+      return vyskyt_znaku();
+    }
+  }
   return vyhledej_retezec_v_souboru();
 }
