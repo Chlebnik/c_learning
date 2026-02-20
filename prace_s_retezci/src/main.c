@@ -12,6 +12,7 @@ int vyskyt_znaku() {
   char znak;
   char *vstup;
   char *vysledek;
+  int c = 0;
   
   if ((vstup = malloc(sizeof(char) * MAX_DELKA_POLE)) == NULL) {
     printf("Chyba pri alokaci pameti.");
@@ -23,14 +24,17 @@ int vyskyt_znaku() {
   *vstup = 0;
   
   /* nacti vstup, aktualni delka pole se uchovava na prvnim pozici */
-  while (++(*vstup) != MAX_DELKA_POLE - 2 && (*(vstup + *vstup) = getc(stdin)) != '\n')
-    ;
+  while (++(*vstup) != MAX_DELKA_POLE - 2 && (c = getc(stdin)) != '\n' && c != EOF) {
+    *(vstup + *vstup) = c;
+  }
   
   *(vstup + *vstup) = '\0';
 
   /* vyprazdni zasobnik pokud text byl delsi nez nase pole */
-  while (*(vstup + *vstup - 1) != '\n' && getc(stdin) != '\n')
-    ;
+  if (c != '\n' && c != EOF) {
+    while ((c = getc(stdin)) != '\n' && c != EOF)
+      ;
+  }
 
   printf("Zadejte znak jehoz vyskyt chcete najit.\n");
     
