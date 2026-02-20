@@ -1,1 +1,0 @@
-/usr/bin/cc -g -Wl,--dependency-file=CMakeFiles/struct.dir/link.d CMakeFiles/struct.dir/src/main.c.o -o struct

@@ -1,1 +1,0 @@
-/usr/bin/cc -g -Wl,--dependency-file=CMakeFiles/pamet.dir/link.d CMakeFiles/pamet.dir/src/main.c.o -o pamet
