@@ -1,1 +1,0 @@
-Pocet nalezenych rozdilu je 4.Pocet pocet_radku 5, pocet_znaku 52 pro soubor cti1.txt.
